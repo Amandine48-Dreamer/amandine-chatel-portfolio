@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projets — Amandine Châtel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.page-hero{min-height:46vh;display:flex;flex-direction:column;justify-content:flex-end;padding:130px 6vw 60px;max-width:1360px;margin:0 auto;position:relative;z-index:2;}
+.page-hero h1{font-family:var(--display);font-weight:500;font-size:clamp(2.6rem,5.8vw,5rem);line-height:1.1;opacity:0;filter:blur(10px);transform:translateY(12px);animation:fadein 1.3s .2s cubic-bezier(.2,.6,.2,1) forwards;}
+.page-hero h1 .accent{color:var(--gold-soft);font-style:italic;}
+.page-hero p{margin-top:22px;color:var(--paper-dim);font-size:1.08rem;max-width:54ch;opacity:0;filter:blur(6px);animation:fadein 1.2s .45s cubic-bezier(.2,.6,.2,1) forwards;}
+@keyframes fadein{to{opacity:1;filter:blur(0);transform:translateY(0);}}
+</style>
+</head>
+<body>
+<div class="dream-sky"><div class="orb orb1"></div><div class="orb orb2"></div></div>
+<div class="stars" id="starField"></div>
+<nav>
+  <a href="index.html" class="nav-name">Amandine Châtel</a>
+  <div class="nav-links"><a href="projets.html" class="active">Projets</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a></div>
+</nav>
+<main>
+  <div class="page-hero">
+    <p class="sec-eyebrow">Portfolio</p>
+    <h1>Projets <span class="accent">sélectionnés</span></h1>
+    <p>Quatre projets Product Design menés chez Expaceo — de la discovery à la delivery, sur des outils SaaS B2B et des outils métiers internes.</p>
+  </div>
+  <section>
+    <div class="wrap">
+      <div class="proj-list veil">
+        <a href="clerks.html" class="proj-row"><span class="proj-num">01</span><div><div class="proj-title">Clerks</div><p class="proj-desc">Refonte d'un outil interne RH &amp; Finance multi-profils pour améliorer l'adoption et l'efficacité.</p></div><span class="proj-year">Jan. 2021 – Sep. 2022</span><span class="proj-arrow">→</span></a>
+        <a href="virtualeo.html" class="proj-row"><span class="proj-num">02</span><div><div class="proj-title">Virtualeo</div><p class="proj-desc">Optimisation d'une plateforme SaaS de formation pour faciliter la compréhension et l'adoption.</p></div><span class="proj-year">Jan. 2023 – Déc. 2024</span><span class="proj-arrow">→</span></a>
+        <a href="afupeo.html" class="proj-row"><span class="proj-num">03</span><div><div class="proj-title">Afupeo</div><p class="proj-desc">Transformation d'un système de gestion comptable basé sur Excel en outil structuré et adopté.</p></div><span class="proj-year">Oct. 2022 – Juil. 2023</span><span class="proj-arrow">→</span></a>
+        <a href="audit-ux.html" class="proj-row"><span class="proj-num">04</span><div><div class="proj-title">Audit UX — Site Expaceo</div><p class="proj-desc">Audit UX/UI et accessibilité d'un site vitrine B2B pour améliorer la conversion et la navigation.</p></div><span class="proj-year">Juin 2025</span><span class="proj-arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <p class="foot-eyebrow veil">Contact</p>
+  <h2 class="veil" style="font-family:var(--display);font-weight:500;font-size:clamp(2rem,4.5vw,3.2rem);max-width:22ch;margin:0 auto 40px;">Discutons de votre <span style="color:var(--gold-soft);font-style:italic;">prochain projet</span></h2>
+  <div class="contact-links veil"><a href="tel:0625183358">06 25 18 33 58</a><a href="mailto:chatelamandine@hotmail.fr">chatelamandine@hotmail.fr</a><a href="https://www.linkedin.com/in/amandine-c-4525b3119/" target="_blank" rel="noopener">LinkedIn</a></div>
+  <p class="foot-copy">© Amandine Châtel 2026</p>
+</footer>
+<script>
+const field=document.getElementById('starField');if(field){const c=window.innerWidth<700?18:34;for(let i=0;i<c;i++){const s=document.createElement('div');s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDuration=(3+Math.random()*5)+'s';s.style.animationDelay=(Math.random()*4)+'s';field.appendChild(s);}}
+const rm=window.matchMedia('(prefers-reduced-motion:reduce)').matches;const v=document.querySelectorAll('.veil');if(!rm){const o=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target);}});},{threshold:0.1});v.forEach(el=>o.observe(el));}else{v.forEach(el=>el.classList.add('in'));}
+</script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Afupeo — Amandine Châtel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.proj-hero{min-height:52vh;display:flex;flex-direction:column;justify-content:flex-end;padding:130px 6vw 60px;max-width:1360px;margin:0 auto;position:relative;z-index:2;}
+.proj-hero h1{font-family:var(--display);font-weight:500;font-size:clamp(3rem,6.5vw,5.5rem);line-height:1.1;opacity:0;filter:blur(10px);transform:translateY(12px);animation:fadein 1.3s .2s cubic-bezier(.2,.6,.2,1) forwards;}
+.proj-hero-sub{margin-top:16px;color:var(--paper-dim);font-size:1.05rem;max-width:60ch;opacity:0;filter:blur(6px);animation:fadein 1.2s .5s cubic-bezier(.2,.6,.2,1) forwards;}
+.proj-hero-meta{display:flex;gap:40px;flex-wrap:wrap;margin-top:34px;opacity:0;animation:fadein 1s .7s forwards;}
+.proj-hero-meta div{font-size:0.8rem;color:var(--paper-dim);}
+.proj-hero-meta strong{display:block;color:var(--paper);font-weight:500;margin-bottom:3px;font-family:var(--display);font-size:1.1rem;}
+@keyframes fadein{to{opacity:1;filter:blur(0);transform:translateY(0);}}
+.proj-content{padding:80px 6vw;max-width:1360px;margin:0 auto;position:relative;z-index:2;}
+.proj-body{display:grid;grid-template-columns:1fr 320px;gap:80px;align-items:start;}
+.proj-img-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px;}
+@media(max-width:960px){.proj-body{grid-template-columns:1fr !important;}.proj-sidebar{position:static !important;width:100% !important;}}
+@media(max-width:760px){.proj-hero{padding:100px 5vw 40px;}.proj-content{padding:40px 5vw;}.proj-block div[style*="grid-template-columns"]{grid-template-columns:1fr !important;}.proj-block div[style*="display:flex"]{flex-direction:column !important;}.proj-block .fig[style*="max-width"]{max-width:100% !important;width:100% !important;flex:none !important;}} .proj-sidebar{position:static!important;}.proj-img-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="dream-sky"><div class="orb orb1"></div><div class="orb orb2"></div></div>
+<div class="stars" id="starField"></div>
+<nav>
+  <a href="index.html" class="nav-name">Amandine Châtel</a>
+  <div class="nav-links"><a href="projets.html" class="active">Projets</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a></div>
+</nav>
+<main>
+  <div class="proj-hero">
+    <p class="sec-eyebrow">Projet 03 · Application interne de gestion financière</p>
+    <h1>Afupeo</h1>
+    <p class="proj-hero-sub">Transformation d'un système de gestion comptable basé sur Excel en un outil structuré et exploitable par les équipes.</p>
+    <div class="proj-hero-meta">
+      <div><strong>Rôle</strong>Product Designer</div>
+      <div><strong>Période</strong>Oct. 2022 – Juil. 2023</div>
+      <div><strong>Contexte</strong>Outil interne Finance · Expaceo</div>
+      <div><strong>Outils</strong>Figma</div>
+    </div>
+  </div>
+
+  <div class="proj-content">
+    <div class="proj-body">
+      <div class="proj-main">
+        <div class="proj-block veil">
+          <h3>Contexte</h3>
+          <p>Afupeo est un outil interne de gestion financière conçu pour centraliser et simplifier des données auparavant gérées via des fichiers Excel. Avant le projet, les équipes utilisaient des tableaux complexes, limitant la lisibilité, la collaboration et le suivi des données.</p>
+        </div>
+
+        <div class="proj-block veil">
+          <h3>Problème produit</h3>
+          <ul>
+            <li>Données difficiles à exploiter dans Excel</li>
+            <li>Manque de visibilité sur les informations clés</li>
+            <li>Collaboration limitée</li>
+            <li>Forte dépendance à des manipulations manuelles</li>
+          </ul>
+          <div class="insight">Un système existant fonctionnel, mais inadapté aux usages réels.</div>
+        </div>
+
+        <div class="proj-block veil">
+          <h3>Démarche — Discovery</h3>
+          <ul>
+            <li>Étude des fichiers Excel existants et compréhension des logiques métier</li>
+            <li>Analyse des tâches quotidiennes et identification des points de friction</li>
+            <li>Identification des enjeux clés : surcharge cognitive, difficulté de lecture, manque de structuration</li>
+          </ul>
+          <div class="insight">Insight clé : le problème ne venait pas du volume de données, mais de leur manque de structuration et de lisibilité.</div>
+        </div>
+
+        <div class="proj-block veil">
+          <div class="proj-img-grid">
+            <figure class="fig" data-caption="Suivi budgétaire — vue structurée remplaçant les anciens tableaux Excel, avec hiérarchisation claire des postes de dépense.">
+              <img src="images/afupeo-suivi-budgetaire.png" alt="Suivi budgétaire — Afupeo">
+              <figcaption class="fig-caption"><span>Suivi budgétaire</span><span class="fig-zoom-hint">Agrandir</span></figcaption>
+            </figure>
+            <figure class="fig" data-caption="Récapitulatif annuel — synthèse consolidée des données financières, pensée pour faciliter la prise de décision.">
+              <img src="images/afupeo-recapitulatif-annuel.png" alt="Récapitulatif annuel — Afupeo">
+              <figcaption class="fig-caption"><span>Récapitulatif annuel</span><span class="fig-zoom-hint">Agrandir</span></figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="proj-block veil">
+          <h3>Décisions &amp; arbitrages</h3>
+          <ul>
+            <li>Ne pas reproduire la logique Excel — repenser complètement la structuration</li>
+            <li>Prioriser les informations essentielles pour améliorer la lisibilité</li>
+            <li>Simplifier les écrans pour réduire la charge cognitive</li>
+            <li>Limiter la densité d'information par écran</li>
+            <li>Adapter aux contraintes techniques tout en conservant une logique produit claire</li>
+          </ul>
+        </div>
+
+        <div class="proj-block veil">
+          <h3>Impact</h3>
+          <ul>
+            <li>Meilleure lisibilité des données</li>
+            <li>Utilisation plus fluide qu'un tableur</li>
+            <li>Réduction des manipulations complexes</li>
+            <li>Meilleure fiabilité des informations</li>
+            <li>Amélioration de la prise de décision</li>
+          </ul>
+        </div>
+
+        <div class="proj-nav-bottom">
+          <a href="virtualeo.html">← Projet précédent : Virtualeo</a>
+          <a href="audit-ux.html">Projet suivant : Audit UX →</a>
+        </div>
+      </div>
+
+      <div class="proj-sidebar">
+        <div class="sidebar-card veil">
+          <h4>Ce projet démontre</h4>
+          <ul><li>Transformation d'un outil existant en produit structuré</li><li>Décisions de simplification fortes</li><li>Compréhension des enjeux métier financiers</li></ul>
+        </div>
+        <div class="sidebar-card veil">
+          <h4>Ce que j'ai appris</h4>
+          <ul><li>Structurer la donnée est aussi important que la visualiser</li><li>La lisibilité est clé dans les outils data</li><li>Simplifier un système nécessite de remettre en question ses fondations</li></ul>
+        </div>
+        <div class="sidebar-card veil">
+          <h4>Compétences mobilisées</h4>
+          <p>UX Research · Wireframes · Prototypage Figma · Architecture de l'information · Design orienté data</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<footer>
+  <p class="foot-eyebrow veil">Contact</p>
+  <h2 class="veil" style="font-family:var(--display);font-weight:500;font-size:clamp(2rem,4.5vw,3.2rem);max-width:22ch;margin:0 auto 40px;">Discutons de votre <span style="color:var(--gold-soft);font-style:italic;">prochain projet</span></h2>
+  <div class="contact-links veil"><a href="tel:0625183358">06 25 18 33 58</a><a href="mailto:chatelamandine@hotmail.fr">chatelamandine@hotmail.fr</a><a href="https://www.linkedin.com/in/amandine-c-4525b3119/" target="_blank" rel="noopener">LinkedIn</a></div>
+  <p class="foot-copy">© Amandine Châtel 2026</p>
+</footer>
+<script>
+const field=document.getElementById('starField');if(field){const c=window.innerWidth<700?18:34;for(let i=0;i<c;i++){const s=document.createElement('div');s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDuration=(3+Math.random()*5)+'s';s.style.animationDelay=(Math.random()*4)+'s';field.appendChild(s);}}
+const rm=window.matchMedia('(prefers-reduced-motion:reduce)').matches;const v=document.querySelectorAll('.veil');if(!rm){const o=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target);}});},{threshold:0.1});v.forEach(el=>o.observe(el));}else{v.forEach(el=>el.classList.add('in'));}
+</script>
+<script src="lightbox.js"></script>
+</body>
+</html>

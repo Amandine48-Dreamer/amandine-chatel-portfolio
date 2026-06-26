@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Amandine Châtel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.contact-page{min-height:90vh;display:flex;flex-direction:column;justify-content:center;padding:130px 6vw 80px;max-width:1360px;margin:0 auto;position:relative;z-index:2;}
+.contact-page h1{font-family:var(--display);font-weight:500;font-size:clamp(2.8rem,6vw,5rem);line-height:1.12;opacity:0;filter:blur(10px);transform:translateY(12px);animation:fadein 1.3s .2s cubic-bezier(.2,.6,.2,1) forwards;}
+.contact-page h1 .accent{color:var(--gold-soft);font-style:italic;}
+.contact-page .rule{opacity:0;animation:fadein 1s .5s forwards;}
+.contact-page > p{margin-top:0;color:var(--paper-dim);font-size:1.08rem;max-width:52ch;opacity:0;filter:blur(6px);animation:fadein 1.2s .55s cubic-bezier(.2,.6,.2,1) forwards;}
+@keyframes fadein{to{opacity:1;filter:blur(0);transform:translateY(0);}}
+.contact-links-big{display:flex;flex-direction:column;gap:22px;margin-top:52px;opacity:0;animation:fadein 1.2s .8s forwards;}
+.contact-links-big a{display:flex;align-items:center;gap:18px;font-family:var(--display);font-size:clamp(1.4rem,2.8vw,2rem);color:var(--paper-dim);position:relative;width:fit-content;padding-bottom:4px;transition:color .3s;}
+.contact-links-big a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .4s ease;}
+.contact-links-big a:hover{color:var(--gold-soft);}
+.contact-links-big a:hover::after{width:100%;}
+.contact-links-big a .icon{font-size:1rem;color:var(--gold);min-width:22px;}
+.dispo{margin-top:60px;opacity:0;animation:fadein 1s 1.05s forwards;}
+.dispo-badge{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line-strong);padding:12px 22px;border-radius:2px;font-size:0.85rem;letter-spacing:0.06em;color:var(--gold-soft);}
+.dispo-badge::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.3;}}
+</style>
+</head>
+<body>
+<div class="dream-sky"><div class="orb orb1"></div><div class="orb orb2"></div></div>
+<div class="stars" id="starField"></div>
+<nav>
+  <a href="index.html" class="nav-name">Amandine Châtel</a>
+  <div class="nav-links"><a href="projets.html">Projets</a><a href="a-propos.html">À propos</a><a href="contact.html" class="active">Contact</a></div>
+</nav>
+<main>
+  <div class="contact-page">
+    <p class="sec-eyebrow">Contact</p>
+    <h1>Discutons de votre <span class="accent">prochain projet</span></h1>
+    <div class="rule"></div>
+    <p>Disponible immédiatement pour un poste de Product Designer en Île-de-France. N'hésitez pas à me contacter par le canal qui vous convient le mieux.</p>
+    <div class="contact-links-big">
+      <a href="tel:0625183358"><span class="icon">✆</span>06 25 18 33 58</a>
+      <a href="mailto:chatelamandine@hotmail.fr"><span class="icon">✉</span>chatelamandine@hotmail.fr</a>
+      <a href="https://www.linkedin.com/in/amandine-c-4525b3119/" target="_blank" rel="noopener"><span class="icon">in</span>LinkedIn — @Amandine C.</a>
+    </div>
+    <div class="dispo">
+      <div class="dispo-badge">Disponible immédiatement · CDI · CDD · Freelance · Île-de-France</div>
+    </div>
+  </div>
+</main>
+<p class="foot-copy" style="text-align:center;padding-bottom:30px;position:relative;z-index:2;">© Amandine Châtel 2026</p>
+<script>
+const field=document.getElementById('starField');if(field){const c=window.innerWidth<700?18:34;for(let i=0;i<c;i++){const s=document.createElement('div');s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDuration=(3+Math.random()*5)+'s';s.style.animationDelay=(Math.random()*4)+'s';field.appendChild(s);}}
+</script>
+</body>
+</html>

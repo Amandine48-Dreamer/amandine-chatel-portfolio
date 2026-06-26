@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Virtualeo — Amandine Châtel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.proj-hero{min-height:52vh;display:flex;flex-direction:column;justify-content:flex-end;padding:130px 6vw 60px;max-width:1360px;margin:0 auto;position:relative;z-index:2;}
+.proj-hero h1{font-family:var(--display);font-weight:500;font-size:clamp(3rem,6.5vw,5.5rem);line-height:1.1;opacity:0;filter:blur(10px);transform:translateY(12px);animation:fadein 1.3s .2s cubic-bezier(.2,.6,.2,1) forwards;}
+.proj-hero-sub{margin-top:16px;color:var(--paper-dim);font-size:1.05rem;max-width:60ch;opacity:0;filter:blur(6px);animation:fadein 1.2s .5s cubic-bezier(.2,.6,.2,1) forwards;}
+.proj-hero-meta{display:flex;gap:40px;flex-wrap:wrap;margin-top:34px;opacity:0;animation:fadein 1s .7s forwards;}
+.proj-hero-meta div{font-size:0.8rem;color:var(--paper-dim);}
+.proj-hero-meta strong{display:block;color:var(--paper);font-weight:500;margin-bottom:3px;font-family:var(--display);font-size:1.1rem;}
+@keyframes fadein{to{opacity:1;filter:blur(0);transform:translateY(0);}}
+.proj-content{padding:80px 6vw;max-width:1360px;margin:0 auto;position:relative;z-index:2;}
+.proj-body{display:grid;grid-template-columns:1fr 320px;gap:80px;align-items:start;}
+@media(max-width:960px){
+  .proj-body{grid-template-columns:1fr !important;}
+  .proj-sidebar{position:static !important;width:100% !important;}
+}
+@media(max-width:760px){
+  .proj-hero{padding:100px 5vw 40px;}
+  .proj-content{padding:40px 5vw;}
+  .proj-hero-meta{gap:20px;}
+  /* Grilles inline 2 colonnes → 1 colonne */
+  .proj-block div[style*="grid-template-columns"]{grid-template-columns:1fr !important;}
+  /* Images portrait côte à côte → colonne */
+  .proj-block div[style*="display:flex"]{flex-direction:column !important;}
+  .proj-block div[style*="display: flex"]{flex-direction:column !important;}
+  /* Images portrait : pleine largeur */
+  .proj-block .fig[style*="max-width"]{max-width:100% !important;width:100% !important;flex:none !important;}
+}
+
+/* Grille portraits : 3 côte à côte desktop, colonne centrée mobile */
+.portraits-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 18px;
+  margin-top: 18px;
+  align-items: flex-start;
+  justify-content: center;
+}
+.portrait-fig {
+  flex: 0 0 220px;
+  width: 220px;
+  min-width: 0;
+}
+@media(max-width:760px){
+  .portraits-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .portrait-fig {
+    flex: none;
+    width: 100%;
+    max-width: 280px;
+  }
+}
+</style>
+</head>
+<body>
+<div class="dream-sky"><div class="orb orb1"></div><div class="orb orb2"></div></div>
+<div class="stars" id="starField"></div>
+<nav>
+  <a href="index.html" class="nav-name">Amandine Châtel</a>
+  <div class="nav-links"><a href="projets.html" class="active">Projets</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a></div>
+</nav>
+<main>
+  <div class="proj-hero">
+    <p class="sec-eyebrow">Projet 02 · Solution SaaS de formation</p>
+    <h1>Virtualeo</h1>
+    <p class="proj-hero-sub">Optimisation d'une plateforme SaaS de formation pour renforcer la compréhension du produit, faciliter l'adoption et renforcer la crédibilité auprès des futurs clients.</p>
+    <div class="proj-hero-meta">
+      <div><strong>Rôle</strong>Product Designer</div>
+      <div><strong>Période</strong>Jan. 2023 – Déc. 2024</div>
+      <div><strong>Contexte</strong>SaaS formation B2B · Expaceo</div>
+      <div><strong>Outils</strong>Figma · Design System</div>
+    </div>
+  </div>
+
+  <div class="proj-content">
+    <div class="proj-body">
+      <div class="proj-main">
+        <div class="proj-block veil">
+          <h3>Contexte &amp; enjeux produit</h3>
+          <p>Virtualeo est une plateforme SaaS permettant d'organiser et gérer des formations en présentiel et distanciel. Lorsque j'ai rejoint le projet, le produit existait déjà mais présentait un manque de clarté dans sa structure et ses parcours, ce qui rendait difficile la compréhension de sa valeur et limitait son adoption.</p>
+        </div>
+
+        <div class="proj-block veil">
+          <h3>Problème produit</h3>
+          <ul>
+            <li>Difficulté à comprendre rapidement la valeur du produit</li>
+            <li>Parcours complexes générant des frictions</li>
+            <li>Manque de hiérarchisation des informations</li>
+            <li>Fonctionnalités peu mises en avant</li>
+          </ul>
+          <div class="insight">Un produit riche, mais difficile à appréhender et à utiliser efficacement.</div>
+        </div>
+
+        <div class="proj-block veil">
+          <h3>Démarche — Discovery</h3>
+          <ul>
+            <li>Analyse des parcours utilisateurs et identification des points de friction</li>
+            <li>Échanges avec le chef de projet pour comprendre les enjeux business</li>
+            <li>Identification des problèmes majeurs : surcharge d'information, manque de hiérarchie</li>
+          </ul>
+          <div class="insight">Insight clé : le problème principal n'était pas le manque de fonctionnalités, mais leur manque de lisibilité et de mise en valeur.</div>
+        </div>
+
+        <div class="proj-block veil">
+          <!-- Design System pleine largeur -->
+          <figure class="fig" data-caption="Design System Virtualeo — boutons, inputs, chips/badges, icônes, tableaux de données, stepper, barre de progression, modales et alertes.">
+            <img src="images/virtualeo-design-system.png" alt="Design System — Virtualeo">
+            <figcaption class="fig-caption"><span>Design System</span><span class="fig-zoom-hint">Agrandir</span></figcaption>
+          </figure>
+
+          <!-- Gestion entités + Création classe : 2 colonnes -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px;">
+            <figure class="fig" data-caption="Gestion des entités — Profil Admin : organisation et paramétrage des structures de formation.">
+              <img src="images/virtualeo-gestion-entites.png" alt="Gestion des entités — Virtualeo">
+              <figcaption class="fig-caption"><span>Gestion des entités — Profil Admin</span><span class="fig-zoom-hint">Agrandir</span></figcaption>
+            </figure>
+            <figure class="fig" data-caption="Création de classe — Profil Admin : paramétrage d'une nouvelle session de formation.">
+              <img src="images/virtualeo-creation-classe.png" alt="Création de classe — Virtualeo">
+              <figcaption class="fig-caption"><span>Création de classe — Profil Admin</span><span class="fig-zoom-hint">Agrandir</span></figcaption>
+            </figure>
+          </div>
+
+          <!-- Ticket incident + Chat général + Partage documents : 3 portraits côte à côte -->
+          <div class="portraits-grid">
+            <figure class="fig portrait-fig" data-narrow data-caption="Ticket d'incident — formulaire de signalement avec statut, priorité et commentaires de suivi.">
+              <img src="images/virtualeo-ticket-incident.png" alt="Ticket incident — Virtualeo" style="width:100%;display:block;">
+              <figcaption class="fig-caption"><span>Ticket d'incident</span><span class="fig-zoom-hint">Agrandir</span></figcaption>
+            </figure>
+            <figure class="fig portrait-fig" data-narrow data-caption="Chat général — espace d'échange entre formateurs et participants au sein d'une classe.">
+              <img src="images/virtualeo-chat-general.png" alt="Chat général — Virtualeo" style="width:100%;display:block;">
+              <figcaption class="fig-caption"><span>Chat général</span><span class="fig-zoom-hint">Agrandir</span></figcaption>
+            </figure>
+            <figure class="fig portrait-fig" data-narrow data-caption="Partage de documents — espace d'échange de fichiers entre formateurs et participants au sein d'une classe.">
+              <img src="images/virtualeo-partage-documents.png" alt="Partage de documents — Virtualeo" style="width:100%;display:block;">
+              <figcaption class="fig-caption"><span>Partage de documents</span><span class="fig-zoom-hint">Agrandir</span></figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="proj-block veil">
+          <h3>Décisions &amp; arbitrages</h3>
+          <ul>
+            <li>Ne pas ajouter de nouvelles fonctionnalités — se concentrer sur l'existant</li>
+            <li>Prioriser la clarté de la proposition de valeur dès les premiers écrans</li>
+            <li>Simplification des parcours clés (création, gestion, navigation)</li>
+            <li>Refonte de la hiérarchie de l'information</li>
+            <li>Alignement des choix UX/UI avec les enjeux business (démos, conversion)</li>
+          </ul>
+        </div>
+
+        <div class="proj-block veil">
+          <h3>Impact</h3>
+          <ul>
+            <li>Meilleure compréhension de la proposition de valeur dès les premiers écrans</li>
+            <li>Réduction des incompréhensions lors des démonstrations produit</li>
+            <li>Expérience plus fluide permettant aux utilisateurs de réaliser leurs premières actions plus rapidement</li>
+            <li>Interface plus cohérente et perçue comme plus professionnelle</li>
+          </ul>
+        </div>
+
+        <div class="proj-nav-bottom">
+          <a href="clerks.html">← Projet précédent : Clerks</a>
+          <a href="afupeo.html">Projet suivant : Afupeo →</a>
+        </div>
+      </div>
+
+      <div class="proj-sidebar">
+        <div class="sidebar-card veil">
+          <h4>Ce projet démontre</h4>
+          <ul><li>Amélioration d'un produit existant sans ajouter de features</li><li>Priorisation clarté et usage réel</li><li>Collaboration étroite équipe produit &amp; tech</li></ul>
+        </div>
+        <div class="sidebar-card veil">
+          <h4>Ce que j'ai appris</h4>
+          <ul><li>La perception de la valeur est clé dans l'adoption</li><li>Simplifier est souvent plus impactant</li><li>Un produit peut être complet mais inefficace s'il est mal structuré</li></ul>
+        </div>
+        <div class="sidebar-card veil">
+          <h4>Compétences mobilisées</h4>
+          <p>UX Research · Discovery · Wireframes · Prototypage Figma · Design System · Architecture de l'information</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<footer>
+  <p class="foot-eyebrow veil">Contact</p>
+  <h2 class="veil" style="font-family:var(--display);font-weight:500;font-size:clamp(2rem,4.5vw,3.2rem);max-width:22ch;margin:0 auto 40px;">Discutons de votre <span style="color:var(--gold-soft);font-style:italic;">prochain projet</span></h2>
+  <div class="contact-links veil"><a href="tel:0625183358">06 25 18 33 58</a><a href="mailto:chatelamandine@hotmail.fr">chatelamandine@hotmail.fr</a><a href="https://www.linkedin.com/in/amandine-c-4525b3119/" target="_blank" rel="noopener">LinkedIn</a></div>
+  <p class="foot-copy">© Amandine Châtel 2026</p>
+</footer>
+<script>
+const field=document.getElementById('starField');if(field){const c=window.innerWidth<700?18:34;for(let i=0;i<c;i++){const s=document.createElement('div');s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDuration=(3+Math.random()*5)+'s';s.style.animationDelay=(Math.random()*4)+'s';field.appendChild(s);}}
+const rm=window.matchMedia('(prefers-reduced-motion:reduce)').matches;const v=document.querySelectorAll('.veil');if(!rm){const o=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target);}});},{threshold:0.1});v.forEach(el=>o.observe(el));}else{v.forEach(el=>el.classList.add('in'));}
+</script>
+<script src="lightbox.js"></script>
+</body>
+</html>

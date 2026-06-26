@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amandine Châtel — Product Designer</title>
+<meta name="description" content="Portfolio d'Amandine Châtel, Product Designer spécialisée SaaS B2B et outils métiers, Île-de-France.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.hero{min-height:93vh;display:flex;flex-direction:column;justify-content:center;padding:140px 6vw 60px;max-width:1360px;margin:0 auto;position:relative;z-index:2;}
+.hero-tag{display:inline-flex;align-items:center;gap:10px;font-size:0.83rem;letter-spacing:0.10em;color:var(--gold-soft);border:1px solid var(--line-strong);padding:9px 20px;border-radius:2px;text-transform:uppercase;width:fit-content;margin-bottom:34px;opacity:0;filter:blur(6px);animation:fadein 1.2s 0.1s cubic-bezier(.2,.6,.2,1) forwards;}
+.hero-tag::before{content:'';width:6px;height:6px;background:var(--gold);border-radius:50%;}
+.hero h1{font-family:var(--display);font-weight:500;font-size:clamp(2.9rem,6.6vw,5.8rem);line-height:1.11;max-width:17ch;letter-spacing:0.002em;opacity:0;filter:blur(10px);transform:translateY(12px);animation:fadein 1.4s 0.3s cubic-bezier(.2,.6,.2,1) forwards;}
+.hero h1 .accent{color:var(--gold-soft);font-style:italic;}
+.hero-rule{width:64px;height:1px;background:var(--gold);margin:34px 0;opacity:0;animation:fadein 1.2s 0.55s forwards;}
+.hero p{font-size:1.12rem;line-height:1.82;color:var(--paper-dim);max-width:50ch;opacity:0;filter:blur(6px);animation:fadein 1.2s 0.7s cubic-bezier(.2,.6,.2,1) forwards;}
+.hero-meta{margin-top:52px;display:flex;gap:52px;opacity:0;filter:blur(6px);animation:fadein 1.2s 0.95s cubic-bezier(.2,.6,.2,1) forwards;}
+.hero-meta div{font-size:0.8rem;color:var(--paper-dim);}
+.hero-meta strong{display:block;font-family:var(--display);font-size:1.8rem;color:var(--paper);font-weight:500;margin-bottom:3px;}
+.hero-cta{margin-top:40px;display:flex;gap:18px;flex-wrap:wrap;opacity:0;filter:blur(6px);animation:fadein 1.2s 1.1s cubic-bezier(.2,.6,.2,1) forwards;}
+@keyframes fadein{to{opacity:1;filter:blur(0);transform:translateY(0);}}
+</style>
+</head>
+<body>
+<div class="dream-sky"><div class="orb orb1"></div><div class="orb orb2"></div></div>
+<div class="stars" id="starField"></div>
+<nav>
+  <a href="index.html" class="nav-name">Amandine Châtel</a>
+  <div class="nav-links"><a href="projets.html">Projets</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a></div>
+</nav>
+<main>
+  <div class="hero">
+    <div class="hero-tag">Product Designer · Produits SaaS &amp; Outils métiers</div>
+    <h1>Structurer la complexité, révéler <span class="accent">l'évidence</span></h1>
+    <div class="hero-rule"></div>
+    <p>Je transforme des systèmes complexes en produits clairs, efficaces et réellement utilisables — en m'appuyant sur une compréhension fine des usages et des enjeux métier.</p>
+    <div class="hero-meta">
+      <div><strong>4 ans</strong>d'expérience produit SaaS &amp; B2B</div>
+      <div><strong>4</strong>projets menés de bout en bout</div>
+      <div><strong>Figma</strong>Design Systems · UX Research</div>
+    </div>
+    <div class="hero-cta">
+      <a href="projets.html" class="btn-gold">Voir mes projets</a>
+      <a href="a-propos.html" class="btn-gold">À propos de moi</a>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head veil">
+        <p class="sec-eyebrow">Méthode</p>
+        <h2>Ce que je <span class="accent">fais</span></h2>
+      </div>
+      <div class="triad veil">
+        <div class="triad-card">
+          <div class="triad-num">01</div>
+          <h3>Comprendre &amp; cadrer</h3>
+          <p>Identifier les problèmes utilisateurs et métier, analyser les usages existants et définir les opportunités d'amélioration produit.</p>
+        </div>
+        <div class="triad-card">
+          <div class="triad-num">02</div>
+          <h3>Concevoir &amp; structurer</h3>
+          <p>Construire des parcours et interfaces claires en structurant l'information et en simplifiant les workflows.</p>
+        </div>
+        <div class="triad-card">
+          <div class="triad-num">03</div>
+          <h3>Améliorer le produit</h3>
+          <p>Optimiser les parcours pour améliorer l'adoption, réduire les frictions et renforcer l'efficacité des outils.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head veil">
+        <p class="sec-eyebrow">Portfolio</p>
+        <h2>Projets <span class="accent">sélectionnés</span></h2>
+      </div>
+      <div class="proj-list veil">
+        <a href="clerks.html" class="proj-row">
+          <span class="proj-num">01</span>
+          <div><div class="proj-title">Clerks</div><p class="proj-desc">Refonte d'un outil interne RH &amp; Finance pour améliorer l'adoption et l'efficacité des équipes.</p></div>
+          <span class="proj-year">2021–2022</span>
+          <span class="proj-arrow">→</span>
+        </a>
+        <a href="virtualeo.html" class="proj-row">
+          <span class="proj-num">02</span>
+          <div><div class="proj-title">Virtualeo</div><p class="proj-desc">Optimisation d'une plateforme SaaS de formation pour faciliter la compréhension et l'adoption.</p></div>
+          <span class="proj-year">2023–2024</span>
+          <span class="proj-arrow">→</span>
+        </a>
+        <a href="afupeo.html" class="proj-row">
+          <span class="proj-num">03</span>
+          <div><div class="proj-title">Afupeo</div><p class="proj-desc">Transformation d'un système de gestion comptable basé sur Excel en outil structuré et adapté.</p></div>
+          <span class="proj-year">2022–2023</span>
+          <span class="proj-arrow">→</span>
+        </a>
+        <a href="audit-ux.html" class="proj-row">
+          <span class="proj-num">04</span>
+          <div><div class="proj-title">Audit UX — Site Expaceo</div><p class="proj-desc">Audit UX/UI et accessibilité d'un site B2B pour améliorer la navigation et la conversion.</p></div>
+          <span class="proj-year">2025</span>
+          <span class="proj-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="posture">
+    <div class="wrap">
+      <div class="veil">
+        <p class="sec-eyebrow" style="margin-bottom:28px;">Ma posture</p>
+        <div class="posture-quote">Comprendre les usages <span class="accent">réels</span> avant de concevoir.</div>
+        <p>Mon rôle est d'identifier les problèmes, de structurer des solutions adaptées et de prendre des décisions qui améliorent concrètement l'efficacité des outils — en trouvant le bon équilibre entre expérience utilisateur, contraintes techniques et objectifs métier.</p>
+        <div style="margin-top:36px;"><a href="a-propos.html" class="btn-gold">En savoir plus sur mon approche</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p class="foot-eyebrow veil">Contact</p>
+  <h2 class="veil" style="font-family:var(--display);font-weight:500;font-size:clamp(2rem,4.5vw,3.2rem);max-width:22ch;margin:0 auto 40px;">Discutons de votre <span style="color:var(--gold-soft);font-style:italic;">prochain projet</span></h2>
+  <div class="contact-links veil">
+    <a href="tel:0625183358">06 25 18 33 58</a>
+    <a href="mailto:chatelamandine@hotmail.fr">chatelamandine@hotmail.fr</a>
+    <a href="https://www.linkedin.com/in/amandine-c-4525b3119/" target="_blank" rel="noopener">LinkedIn — @Amandine C.</a>
+  </div>
+  <p class="foot-copy">© Amandine Châtel 2026</p>
+</footer>
+<script>
+const field=document.getElementById('starField');
+if(field){const c=window.innerWidth<700?18:34;for(let i=0;i<c;i++){const s=document.createElement('div');s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDuration=(3+Math.random()*5)+'s';s.style.animationDelay=(Math.random()*4)+'s';field.appendChild(s);}}
+const rm=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+const v=document.querySelectorAll('.veil');
+if(!rm){const o=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target);}});},{threshold:0.1});v.forEach(el=>o.observe(el));}
+else{v.forEach(el=>el.classList.add('in'));}
+</script>
+</body>
+</html>

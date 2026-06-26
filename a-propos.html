@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>À propos — Amandine Châtel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.page-hero{min-height:46vh;display:flex;flex-direction:column;justify-content:flex-end;padding:130px 6vw 60px;max-width:1360px;margin:0 auto;position:relative;z-index:2;}
+.page-hero h1{font-family:var(--display);font-weight:500;font-size:clamp(2.6rem,5.8vw,5rem);line-height:1.1;opacity:0;filter:blur(10px);transform:translateY(12px);animation:fadein 1.3s .2s cubic-bezier(.2,.6,.2,1) forwards;}
+.page-hero h1 .accent{color:var(--gold-soft);font-style:italic;}
+.page-hero p{margin-top:22px;color:var(--paper-dim);font-size:1.08rem;max-width:54ch;opacity:0;filter:blur(6px);animation:fadein 1.2s .45s cubic-bezier(.2,.6,.2,1) forwards;}
+@keyframes fadein{to{opacity:1;filter:blur(0);transform:translateY(0);}}
+.about-content{padding:80px 6vw;max-width:1360px;margin:0 auto;position:relative;z-index:2;}
+.about-grid{display:grid;grid-template-columns:1.2fr 0.9fr;gap:90px;align-items:start;margin-bottom:90px;}
+.about-text > * + *{margin-top:28px;}
+.about-text p{color:var(--paper-dim);line-height:1.88;font-size:0.98rem;}
+.about-text h3{font-family:var(--display);font-weight:500;font-size:1.4rem;color:var(--gold-soft);margin-bottom:6px;}
+.skill-bar-section h3{font-family:var(--display);font-weight:500;font-size:1.4rem;color:var(--gold-soft);margin-bottom:24px;}
+.skill-group{margin-bottom:32px;}
+.skill-group h4{font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--paper-dim);margin-bottom:14px;}
+.skill-tags{display:flex;flex-wrap:wrap;gap:8px;}
+.skill-tag{display:inline-block;border:1px solid var(--line-strong);color:var(--paper-dim);font-size:0.8rem;padding:5px 14px;border-radius:2px;letter-spacing:0.03em;}
+.parcours{border-top:1px solid var(--line);padding-top:70px;margin-top:20px;}
+.parcours h2{font-family:var(--display);font-weight:500;font-size:clamp(1.8rem,3vw,2.5rem);margin-bottom:50px;}
+.timeline{display:flex;flex-direction:column;gap:0;}
+.tl-row{display:grid;grid-template-columns:180px 1fr;gap:40px;padding:32px 0;border-bottom:1px solid var(--line);}
+.tl-row:first-child{border-top:1px solid var(--line);}
+.tl-year{font-family:var(--display);color:var(--gold);font-size:1rem;padding-top:3px;}
+.tl-content h4{font-family:var(--display);font-weight:500;font-size:1.25rem;margin-bottom:6px;}
+.tl-content p{color:var(--paper-dim);font-size:0.95rem;line-height:1.7;}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:50px;}.tl-row{grid-template-columns:1fr;gap:6px;}.tl-year{font-size:0.85rem;}}
+</style>
+</head>
+<body>
+<div class="dream-sky"><div class="orb orb1"></div><div class="orb orb2"></div></div>
+<div class="stars" id="starField"></div>
+<nav>
+  <a href="index.html" class="nav-name">Amandine Châtel</a>
+  <div class="nav-links"><a href="projets.html">Projets</a><a href="a-propos.html" class="active">À propos</a><a href="contact.html">Contact</a></div>
+</nav>
+<main>
+  <div class="page-hero">
+    <p class="sec-eyebrow">À propos</p>
+    <h1>Product Designer <span class="accent">SaaS B2B</span></h1>
+    <p>Je conçois des produits qui transforment des systèmes complexes en outils clairs, efficaces et réellement adoptés.</p>
+  </div>
+
+  <div class="about-content">
+    <div class="about-grid veil">
+      <div class="about-text">
+        <h3>Mon approche</h3>
+        <p>J'interviens de la Discovery à la Delivery avec une double culture design produit et pilotage de projets digitaux. Je comprends les enjeux métier, collabore avec les équipes tech et prends des décisions qui équilibrent besoins utilisateurs, contraintes techniques et objectifs business.</p>
+        <p>Mon approche est pragmatique et orientée produit : comprendre les usages réels avant de concevoir, simplifier plutôt qu'ajouter, et prendre des décisions qui améliorent concrètement l'efficacité des outils.</p>
+
+        <h3>Mon parcours</h3>
+        <p>Après un parcours dans des univers créatifs (sites culturels majeurs — Louvre, Versailles, Pompidou) puis en gestion de projets digitaux (7 ans chez Amfine Services &amp; Software / Nexton, dont une mission chez BNP Paribas), j'ai choisi de me spécialiser en design UI/UX en 2021 à l'école La Passerelle.</p>
+        <p>Cette trajectoire nourrit directement ma pratique : je comprends les contraintes du delivery, les enjeux métier et la complexité des environnements B2B.</p>
+
+        <h3>En dehors du design</h3>
+        <p>Grande lectrice (fantasy, SF — Alain Damasio, Jaworski, GRRM), j'explore en parallèle une pratique créative autour de la matière et de la lumière. Cette démarche nourrit mon attention au détail, à la composition et à la lisibilité.</p>
+      </div>
+
+      <div class="skill-bar-section">
+        <h3>Compétences</h3>
+        <div class="skill-group">
+          <h4>UX / UI Design</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Figma</span>
+            <span class="skill-tag">Prototypage</span>
+            <span class="skill-tag">Wireframes</span>
+            <span class="skill-tag">Design System</span>
+            <span class="skill-tag">Parcours utilisateurs</span>
+            <span class="skill-tag">Architecture info.</span>
+            <span class="skill-tag">Accessibilité WCAG</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Research &amp; Méthodes</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Interviews utilisateurs</span>
+            <span class="skill-tag">Audit UX</span>
+            <span class="skill-tag">Tests utilisateurs</span>
+            <span class="skill-tag">User Stories</span>
+            <span class="skill-tag">Design Thinking</span>
+            <span class="skill-tag">Priorisation Impact/Effort</span>
+            <span class="skill-tag">Vision MVP</span>
+            <span class="skill-tag">Méthode Agile</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Outils</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Jira</span>
+            <span class="skill-tag">Notion</span>
+            <span class="skill-tag">Slack</span>
+            <span class="skill-tag">IA générative</span>
+            <span class="skill-tag">HTML/CSS (bases)</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Recherche</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">📍 Île-de-France</span>
+            <span class="skill-tag">🏠 1j télétravail min.</span>
+            <span class="skill-tag">💼 CDI · CDD · Freelance</span>
+            <span class="skill-tag">✅ Disponible immédiatement</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="parcours veil">
+      <h2>Parcours</h2>
+      <div class="timeline">
+        <div class="tl-row">
+          <div class="tl-year">2021 – 2025</div>
+          <div class="tl-content">
+            <h4>Product Designer · Expaceo</h4>
+            <p>Outils SaaS B2B pour équipes métiers · Île-de-France. Discovery, conception UX/UI, design systems, tests utilisateurs, audit accessibilité WCAG.</p>
+          </div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-year">2021</div>
+          <div class="tl-content">
+            <h4>Formation Digital UI &amp; UX Design</h4>
+            <p>École La Passerelle · Paris</p>
+          </div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-year">2013 – 2020</div>
+          <div class="tl-content">
+            <h4>Cheffe de projet Digital · Amfine Services &amp; Software / Nexton</h4>
+            <p>Projets digitaux complexes · clients grands comptes · Île-de-France. Pilotage multi-acteurs, cadrage, suivi de delivery, conduite du changement.</p>
+          </div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-year">2008 – 2013</div>
+          <div class="tl-content">
+            <h4>Intervenante Musées · Coordinatrice d'équipe · Espro / Sycomore</h4>
+            <p>Sites culturels majeurs : Louvre, Versailles, Pompidou, Rodin, Grand Palais, Quai Branly. Encadrement d'une équipe de 10 personnes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p class="foot-eyebrow veil">Contact</p>
+  <h2 class="veil" style="font-family:var(--display);font-weight:500;font-size:clamp(2rem,4.5vw,3.2rem);max-width:22ch;margin:0 auto 40px;">Discutons de votre <span style="color:var(--gold-soft);font-style:italic;">prochain projet</span></h2>
+  <div class="contact-links veil">
+    <a href="tel:0625183358">06 25 18 33 58</a>
+    <a href="mailto:chatelamandine@hotmail.fr">chatelamandine@hotmail.fr</a>
+    <a href="https://www.linkedin.com/in/amandine-c-4525b3119/" target="_blank" rel="noopener">LinkedIn — @Amandine C.</a>
+  </div>
+  <p class="foot-copy">© Amandine Châtel 2026</p>
+</footer>
+<script>
+const field=document.getElementById('starField');if(field){const c=window.innerWidth<700?18:34;for(let i=0;i<c;i++){const s=document.createElement('div');s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDuration=(3+Math.random()*5)+'s';s.style.animationDelay=(Math.random()*4)+'s';field.appendChild(s);}}
+const rm=window.matchMedia('(prefers-reduced-motion:reduce)').matches;const v=document.querySelectorAll('.veil');if(!rm){const o=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target);}});},{threshold:0.1});v.forEach(el=>o.observe(el));}else{v.forEach(el=>el.classList.add('in'));}
+</script>
+</body>
+</html>

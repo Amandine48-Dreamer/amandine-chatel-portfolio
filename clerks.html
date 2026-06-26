@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clerks — Amandine Châtel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.proj-hero{min-height:52vh;display:flex;flex-direction:column;justify-content:flex-end;padding:130px 6vw 60px;max-width:1360px;margin:0 auto;position:relative;z-index:2;}
+.proj-hero h1{font-family:var(--display);font-weight:500;font-size:clamp(3rem,6.5vw,5.5rem);line-height:1.1;opacity:0;filter:blur(10px);transform:translateY(12px);animation:fadein 1.3s .2s cubic-bezier(.2,.6,.2,1) forwards;}
+.proj-hero-sub{margin-top:16px;color:var(--paper-dim);font-size:1.05rem;max-width:60ch;opacity:0;filter:blur(6px);animation:fadein 1.2s .5s cubic-bezier(.2,.6,.2,1) forwards;}
+.proj-hero-meta{display:flex;gap:40px;flex-wrap:wrap;margin-top:34px;opacity:0;animation:fadein 1s .7s forwards;}
+.proj-hero-meta div{font-size:0.8rem;color:var(--paper-dim);}
+.proj-hero-meta strong{display:block;color:var(--paper);font-weight:500;margin-bottom:3px;font-family:var(--display);font-size:1.1rem;}
+@keyframes fadein{to{opacity:1;filter:blur(0);transform:translateY(0);}}
+.proj-content{padding:80px 6vw;max-width:1360px;margin:0 auto;position:relative;z-index:2;}
+.proj-body{display:grid;grid-template-columns:1fr 320px;gap:80px;align-items:start;}
+.proj-img-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px;}
+@media(max-width:960px){.proj-body{grid-template-columns:1fr !important;}.proj-sidebar{position:static !important;width:100% !important;}}
+@media(max-width:760px){.proj-hero{padding:100px 5vw 40px;}.proj-content{padding:40px 5vw;}.proj-block div[style*="grid-template-columns"]{grid-template-columns:1fr !important;}.proj-block div[style*="display:flex"]{flex-direction:column !important;}.proj-block .fig[style*="max-width"]{max-width:100% !important;width:100% !important;flex:none !important;}} .proj-sidebar{position:static!important;}.proj-img-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="dream-sky"><div class="orb orb1"></div><div class="orb orb2"></div></div>
+<div class="stars" id="starField"></div>
+<nav>
+  <a href="index.html" class="nav-name">Amandine Châtel</a>
+  <div class="nav-links"><a href="projets.html" class="active">Projets</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a></div>
+</nav>
+<main>
+  <div class="proj-hero">
+    <p class="sec-eyebrow">Projet 01 · Logiciel interne RH &amp; Finance</p>
+    <h1>Clerks</h1>
+    <p class="proj-hero-sub">Refonte produit d'un outil interne RH &amp; Finance pour améliorer l'adoption et l'efficacité des équipes.</p>
+    <div class="proj-hero-meta">
+      <div><strong>Rôle</strong>Product Designer</div>
+      <div><strong>Période</strong>Jan. 2021 – Sep. 2022</div>
+      <div><strong>Contexte</strong>Outil interne B2B · Expaceo</div>
+      <div><strong>Outils</strong>Figma · Design System</div>
+    </div>
+  </div>
+
+  <div class="proj-content">
+    <div class="proj-body">
+      <div class="proj-main">
+        <div class="proj-block veil">
+          <h3>Contexte</h3>
+          <p>Clerks est un outil interne RH et Finance utilisé quotidiennement par plusieurs profils — Consultants, Managers, Administrateurs — pour gérer des activités clés : congés, suivi d'activité, facturation et données internes.</p>
+          <p>Avec le temps, le produit est devenu difficile à utiliser : complexité croissante, manque de lisibilité, difficulté à évoluer. Impact direct : perte d'efficacité et adoption limitée.</p>
+        </div>
+
+        <div class="proj-block veil">
+          <h3>Problème produit</h3>
+          <ul>
+            <li>Difficulté à accéder rapidement aux informations clés</li>
+            <li>Workflows trop longs et peu intuitifs</li>
+            <li>Interfaces surchargées, sans hiérarchisation claire</li>
+            <li>Usage hétérogène selon les profils</li>
+          </ul>
+          <div class="insight">Un produit fonctionnel, mais inefficace dans l'usage réel.</div>
+        </div>
+
+        <div class="proj-block veil">
+          <h3>Démarche — Discovery</h3>
+          <ul>
+            <li>Analyse des usages : étude des workflows, identification des tâches fréquentes</li>
+            <li>Échanges utilisateurs : discussions avec différents profils, compréhension des frustrations</li>
+            <li>Identification des points critiques : surcharge cognitive, navigation peu claire, manque d'adaptation aux rôles</li>
+          </ul>
+          <div class="insight">Insight clé : le problème principal n'était pas le design visuel, mais l'organisation de l'information et des parcours.</div>
+        </div>
+
+        <div class="proj-block veil">
+          <div class="proj-img-grid">
+            <figure class="fig" data-caption="Dashboard Clerks — vue d'ensemble du profil Administrateur : indicateurs clés, CRA en attente de validation, suivi des échéances.">
+              <img src="images/clerks-dashboard.png" alt="Dashboard Clerks">
+              <figcaption class="fig-caption"><span>Dashboard — Profil Administrateur</span><span class="fig-zoom-hint">Agrandir</span></figcaption>
+            </figure>
+            <figure class="fig" data-caption="Portefeuille client — vue d'ensemble des clients, avec filtres et indicateurs de suivi par compte.">
+              <img src="images/clerks-portefeuille-client.png" alt="Portefeuille client — Clerks">
+              <figcaption class="fig-caption"><span>Portefeuille client — Vue d'ensemble</span><span class="fig-zoom-hint">Agrandir</span></figcaption>
+            </figure>
+            <figure class="fig" data-caption="Gestion des comptes rendus d'activité (CRA) côté Profil Consultant — saisie simplifiée du temps de travail.">
+              <img src="images/clerks-cra-activite.png" alt="Gestion des CRA — Clerks">
+              <figcaption class="fig-caption"><span>Gestion des CRA — Profil Consultant</span><span class="fig-zoom-hint">Agrandir</span></figcaption>
+            </figure>
+            <figure class="fig" data-caption="Historique — traçabilité des actions et des modifications par profil Administrateur.">
+              <img src="images/clerks-historique.png" alt="Historique — Clerks">
+              <figcaption class="fig-caption"><span>Historique — Profil Administrateur</span><span class="fig-zoom-hint">Agrandir</span></figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="proj-block veil">
+          <h3>Décisions &amp; arbitrages</h3>
+          <ul>
+            <li>Priorisation des workflows critiques (suivi d'activité, facturation, congés)</li>
+            <li>Suppression des étapes à faible valeur pour réduire la complexité</li>
+            <li>Réorganisation du produit par profil utilisateur (Consultant, Manager, Administrateur)</li>
+            <li>Simplification de l'architecture de navigation</li>
+            <li>Mise en place d'un design system pour homogénéiser les interfaces</li>
+          </ul>
+        </div>
+
+        <div class="proj-block veil">
+          <h3>Impact</h3>
+          <ul>
+            <li>Prise en main plus rapide de l'outil</li>
+            <li>Usage plus fluide au quotidien</li>
+            <li>Réduction du temps d'accès aux informations clés</li>
+            <li>Diminution des erreurs liées aux workflows</li>
+          </ul>
+          <div class="insight">Retours utilisateurs : « Plus clair », « Plus simple à utiliser », « On trouve plus vite les infos ».</div>
+        </div>
+
+        <div class="proj-nav-bottom">
+          <a href="projets.html">← Tous les projets</a>
+          <a href="virtualeo.html">Projet suivant : Virtualeo →</a>
+        </div>
+      </div>
+
+      <div class="proj-sidebar">
+        <div class="sidebar-card veil">
+          <h4>Ce projet démontre</h4>
+          <ul><li>Travail sur produit complexe à forts enjeux métier</li><li>Décisions impactantes en contexte contraint</li><li>Équilibre besoins utilisateurs / contraintes tech</li></ul>
+        </div>
+        <div class="sidebar-card veil">
+          <h4>Ce que j'ai appris</h4>
+          <ul><li>Comprendre avant de concevoir est essentiel</li><li>Simplifier est souvent plus impactant que rajouter</li><li>La hiérarchie de l'information est décisive</li></ul>
+        </div>
+        <div class="sidebar-card veil">
+          <h4>Compétences mobilisées</h4>
+          <p>Discovery · UX Research · Wireframes · Prototypage Figma · Design System · Architecture de l'information · Tests utilisateurs</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<footer>
+  <p class="foot-eyebrow veil">Contact</p>
+  <h2 class="veil" style="font-family:var(--display);font-weight:500;font-size:clamp(2rem,4.5vw,3.2rem);max-width:22ch;margin:0 auto 40px;">Discutons de votre <span style="color:var(--gold-soft);font-style:italic;">prochain projet</span></h2>
+  <div class="contact-links veil"><a href="tel:0625183358">06 25 18 33 58</a><a href="mailto:chatelamandine@hotmail.fr">chatelamandine@hotmail.fr</a><a href="https://www.linkedin.com/in/amandine-c-4525b3119/" target="_blank" rel="noopener">LinkedIn</a></div>
+  <p class="foot-copy">© Amandine Châtel 2026</p>
+</footer>
+<script>
+const field=document.getElementById('starField');if(field){const c=window.innerWidth<700?18:34;for(let i=0;i<c;i++){const s=document.createElement('div');s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDuration=(3+Math.random()*5)+'s';s.style.animationDelay=(Math.random()*4)+'s';field.appendChild(s);}}
+const rm=window.matchMedia('(prefers-reduced-motion:reduce)').matches;const v=document.querySelectorAll('.veil');if(!rm){const o=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target);}});},{threshold:0.1});v.forEach(el=>o.observe(el));}else{v.forEach(el=>el.classList.add('in'));}
+</script>
+<script src="lightbox.js"></script>
+</body>
+</html>
